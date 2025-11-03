@@ -38,11 +38,33 @@
         transform: translateY(0);
       }
     }
+        img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid #00ffff;
+      object-fit: cover;
+      box-shadow: 0 0 20px #00ffff;
+      animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #00ffff; }
+      to { box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff; }
+    }
+
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col items-center p-6">
 
   <!-- Header -->
+  <img src="w" alt="Profile">
 
   <h1 class="text-3xl sm:text-4xl font-bold text-center mt-10 typewriter">
     💫 Hi 👋, I'm Kalakanhu Swain
